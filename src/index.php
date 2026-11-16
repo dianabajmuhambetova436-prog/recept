@@ -19,7 +19,7 @@ $recipes = $pdo->query("SELECT * FROM recipes ORDER BY id DESC")->fetchAll(PDO::
     <h1>Мои рецепты</h1>
     <?php foreach($recipes as $r):?>
         <div class="recipe">
-            <strong><?= htmlspecialchars($r['titl'])?></strong>
+            <strong><?= htmlspecialchars($r['title'])?></strong>
             <p><?= htmlspecialchars($r['ingredients']) ?></p>
             <small><?= (int)$r['time_minutes'] ?> мин</small>
         </div>
